@@ -5,7 +5,7 @@ export default function Gallery() {
       title: 'Taekwondo Training'
     },
     {
-      url: 'https://images.pexels.com/photos/3775593/pexels-photo-3775593.jpeg?auto=compress&cs=tinysrgb&w=800',
+      url: 'https://th.bing.com/th/id/OIP.xe4yfjcZeb2yKMex0VQbkwHaEK?w=299&h=180&c=7&r=0&o=7&cb=12&pid=1.7&rm=3',
       title: 'Dance Sessions'
     },
     {
