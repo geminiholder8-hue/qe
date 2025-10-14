@@ -32,7 +32,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-xl mb-2">Location</h3>
-                  <p className="text-gray-400">sundarbasti, bhangal-08, Budha-Nilkantha, Nepal 44600</p>
+                  <p className="text-gray-400">kathmandu,nepal</p>
                   <p className="text-gray-500 text-sm mt-1">Near major landmarks</p>
                 </div>
               </div>
