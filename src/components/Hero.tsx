@@ -19,27 +19,31 @@ export default function Hero() {
         </div>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight">
-          <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-orange-500 text-transparent bg-clip-text">
-            Unleash Your
-          </span>
+          <span className="text-white">Where Passion</span>
           <br />
-          <span className="text-white">Potential</span>
+          <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-orange-500 text-transparent bg-clip-text">
+            Meets Performance!
+          </span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-          Move, Create, Conquer at <span className="text-orange-400 font-bold">The ECA Heaven</span> – Kathmandu's premier hub for fitness, martial arts, dance, and performing arts.
+        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          Your one-stop hub for Dance, Zumba, Martial Arts, Music & Acting – helping kids, teens, and adults grow with confidence and creativity.
+        </p>
+
+        <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+          At THE ECA HEAVEN, we believe every child and adult has a hidden talent waiting to shine. Our hub nurtures creativity, builds confidence, and develops life skills through arts, fitness, and performance.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold rounded-full hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
             <span className="flex items-center gap-2">
-              Book Free Trial
+              Join a Free Trial
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
           </button>
 
           <button className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-full border-2 border-orange-500 hover:bg-orange-500 hover:border-orange-500 transition-all duration-300 hover:scale-105">
-            Explore Programs
+            Explore Our Programs
           </button>
         </div>
 

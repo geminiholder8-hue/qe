@@ -3,31 +3,31 @@ import { Star, Quote } from 'lucide-react';
 export default function Testimonials() {
   const testimonials = [
     {
-      name: 'Anisha Sharma',
-      role: 'Taekwondo Student',
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200',
-      text: 'The ECA Heaven transformed my confidence completely. I went from being shy to earning my black belt and competing nationally. The instructors here are phenomenal.',
-      rating: 5
-    },
-    {
-      name: 'Rohit Thapa',
-      role: 'Muay Thai Enthusiast',
-      image: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=200',
-      text: 'Best decision I ever made! Lost 15kg in 4 months while learning authentic Muay Thai. The trainers push you just right – tough but caring.',
-      rating: 5
-    },
-    {
-      name: 'Priya Gautam',
-      role: 'Dance & Zumba Member',
-      image: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=200',
-      text: 'The Zumba and dance classes are so fun! It doesn\'t feel like working out. The community here is so supportive and the energy is unmatched.',
-      rating: 5
-    },
-    {
-      name: 'Suman Karki',
-      role: 'Parent',
+      name: 'Parent',
+      role: 'Parent of Dance & Acting Student',
       image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=200',
-      text: 'My son has been attending Taekwondo and acting classes for a year. His discipline, focus, and confidence have improved tremendously. Highly recommend!',
+      text: 'My daughter has gained so much confidence after joining THE ECA HEAVEN. She loves her dance and acting classes!',
+      rating: 5
+    },
+    {
+      name: 'Adult Student',
+      role: 'Zumba Member',
+      image: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=200',
+      text: 'I joined Zumba and have lost weight while having fun. Highly recommended.',
+      rating: 5
+    },
+    {
+      name: 'Teen Student',
+      role: 'Performance Student',
+      image: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=200',
+      text: 'I performed on stage for the first time with THE ECA HEAVEN, and it was the best moment of my life.',
+      rating: 5
+    },
+    {
+      name: 'Satisfied Member',
+      role: 'Martial Arts Student',
+      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200',
+      text: 'The trainers are amazing and really care about our progress. I\'ve learned so much and built great friendships here.',
       rating: 5
     }
   ];

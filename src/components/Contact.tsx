@@ -32,8 +32,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-xl mb-2">Location</h3>
-                  <p className="text-gray-400">kathmandu,nepal</p>
-                  <p className="text-gray-500 text-sm mt-1">Near major landmarks</p>
+                  <p className="text-gray-400">Kathmandu, Nepal</p>
+                  <p className="text-gray-500 text-sm mt-1">Easily accessible location</p>
                 </div>
               </div>
             </div>
@@ -44,9 +44,10 @@ export default function Contact() {
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-xl mb-2">Phone</h3>
-                  <p className="text-gray-400">+977 9706418555,9705851573</p>
-                  <p className="text-gray-500 text-sm mt-1">Call us anytime</p>
+                  <h3 className="text-white font-bold text-xl mb-2">Phone / WhatsApp</h3>
+                  <p className="text-gray-400">+977 9706418555</p>
+                  <p className="text-gray-400">+977 9705851573</p>
+                  <p className="text-gray-500 text-sm mt-1">Call or message us anytime</p>
                 </div>
               </div>
             </div>

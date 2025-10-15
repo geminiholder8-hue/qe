@@ -4,6 +4,7 @@ import About from './components/About';
 import Programs from './components/Programs';
 import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
+import Pricing from './components/Pricing';
 import CTA from './components/CTA';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -18,6 +19,7 @@ function App() {
       <Programs />
       <Gallery />
       <Testimonials />
+      <Pricing />
       <CTA />
       <Contact />
       <Footer />
