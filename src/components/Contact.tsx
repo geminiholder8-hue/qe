@@ -8,16 +8,16 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-black">
+    <section id="contact" className="py-24 bg-gradient-to-b from-green-900 to-emerald-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full mb-6">
-            <span className="text-blue-400 font-semibold">Get In Touch</span>
+        <div className="text-center mb-16 animate-slide-in">
+          <div className="inline-block px-4 py-2 bg-yellow-400/20 border border-yellow-400/40 rounded-full mb-6">
+            <span className="text-yellow-300 font-bold">Get In Touch</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-black text-yellow-300 mb-6">
             Visit Us &
-            <span className="block bg-gradient-to-r from-blue-400 to-orange-400 text-transparent bg-clip-text">
+            <span className="block bg-gradient-to-r from-yellow-200 to-amber-300 text-transparent bg-clip-text">
               Start Your Journey
             </span>
           </h2>
@@ -25,58 +25,63 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700">
+            <div className="bg-yellow-100 p-6 rounded-2xl border-2 border-yellow-400 hover:shadow-xl glow-yellow transition-all duration-300 hover:scale-105">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-green-700 to-emerald-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-yellow-300" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-xl mb-2">Location</h3>
-                  <p className="text-gray-400">Kathmandu, Nepal</p>
-                  <p className="text-gray-500 text-sm mt-1">Easily accessible location</p>
+                  <h3 className="text-green-900 font-black text-xl mb-2">Location</h3>
+                  <p className="text-green-800 font-semibold">P9X4+GJW, Budhanilkantha</p>
+                  <p className="text-green-800 font-semibold">Kathmandu 44600</p>
+                  <p className="text-green-700 text-sm mt-1">Easily accessible location</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700">
+            <div className="bg-yellow-100 p-6 rounded-2xl border-2 border-yellow-400 hover:shadow-xl glow-yellow transition-all duration-300 hover:scale-105">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-white font-bold text-xl mb-2">Phone / WhatsApp</h3>
-                  <p className="text-gray-400">+977 9706418555</p>
-                  <p className="text-gray-400">+977 9705851573</p>
-                  <p className="text-gray-500 text-sm mt-1">Call or message us anytime</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-white font-bold text-xl mb-2">Email</h3>
-                  <p className="text-gray-400">info@ecaheaven.com</p>
-                  <p className="text-gray-500 text-sm mt-1">We'll respond within 24 hours</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-green-700 to-emerald-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-yellow-300" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-white font-bold text-xl mb-4">Class Schedule</h3>
+                  <h3 className="text-green-900 font-black text-xl mb-3">Phone / WhatsApp</h3>
+                  <a href="tel:+9779706418555" className="block text-green-800 font-bold text-lg hover:text-green-900 mb-2 transition-colors">
+                    +977 9706418555
+                  </a>
+                  <a href="tel:+9779705851573" className="block text-green-800 font-bold text-lg hover:text-green-900 mb-2 transition-colors">
+                    +977 9705851573
+                  </a>
+                  <p className="text-green-700 text-sm mt-2">Call or message us anytime</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-yellow-100 p-6 rounded-2xl border-2 border-yellow-400 hover:shadow-xl glow-yellow transition-all duration-300 hover:scale-105">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-700 to-emerald-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-yellow-300" />
+                </div>
+                <div>
+                  <h3 className="text-green-900 font-black text-xl mb-2">Email</h3>
+                  <p className="text-green-800 font-semibold">info@ecaheaven.com</p>
+                  <p className="text-green-700 text-sm mt-1">We'll respond within 24 hours</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-yellow-100 p-6 rounded-2xl border-2 border-yellow-400 hover:shadow-xl glow-yellow transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-700 to-emerald-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-6 h-6 text-yellow-300" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-green-900 font-black text-xl mb-4">Class Schedule</h3>
                   <div className="space-y-3">
                     {schedule.map((item, index) => (
                       <div key={index} className="flex justify-between items-center">
-                        <span className="text-gray-400">{item.day}</span>
-                        <span className="text-blue-400 font-semibold">{item.time}</span>
+                        <span className="text-green-800 font-semibold">{item.day}</span>
+                        <span className="text-green-900 font-bold">{item.time}</span>
                       </div>
                     ))}
                   </div>
@@ -87,31 +92,31 @@ export default function Contact() {
             <div className="flex gap-4">
               <a
                 href="#"
-                className="flex-1 bg-gradient-to-br from-pink-600 to-purple-600 p-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-pink-500/50 transition-all"
+                className="flex-1 bg-gradient-to-br from-yellow-400 to-amber-500 p-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-lg glow-yellow transition-all hover:scale-105"
               >
-                <Instagram className="w-6 h-6 text-white" />
-                <span className="text-white font-semibold">Instagram</span>
+                <Instagram className="w-6 h-6 text-green-900" />
+                <span className="text-green-900 font-black">Instagram</span>
               </a>
               <a
                 href="#"
-                className="flex-1 bg-gradient-to-br from-blue-600 to-blue-700 p-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-blue-500/50 transition-all"
+                className="flex-1 bg-gradient-to-br from-yellow-400 to-amber-500 p-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-lg glow-yellow transition-all hover:scale-105"
               >
-                <Facebook className="w-6 h-6 text-white" />
-                <span className="text-white font-semibold">Facebook</span>
+                <Facebook className="w-6 h-6 text-green-900" />
+                <span className="text-green-900 font-black">Facebook</span>
               </a>
               <a
                 href="#"
-                className="flex-1 bg-gradient-to-br from-red-600 to-red-700 p-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-red-500/50 transition-all"
+                className="flex-1 bg-gradient-to-br from-yellow-400 to-amber-500 p-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-lg glow-yellow transition-all hover:scale-105"
               >
-                <Youtube className="w-6 h-6 text-white" />
-                <span className="text-white font-semibold">YouTube</span>
+                <Youtube className="w-6 h-6 text-green-900" />
+                <span className="text-green-900 font-black">YouTube</span>
               </a>
             </div>
           </div>
 
-          <div className="h-[600px] rounded-2xl overflow-hidden border border-gray-700">
+          <div className="h-[600px] rounded-2xl overflow-hidden border-4 border-yellow-400 shadow-2xl glow-yellow">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.235857969!2d85.32394!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDQzJzAyLjAiTiA4NcKwMTknMjYuMiJF!5e0!3m2!1sen!2snp!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.0872944863!2d85.35570731506263!3d27.748596682787843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1969e1a75e05%3A0x5e5e5e5e5e5e5e5e!2sP9X4%2BGJW%2C%20Budhanilkantha%2044600!5e0!3m2!1sen!2snp!4v1697000000000!5m2!1sen!2snp"
               width="100%"
               height="100%"
               style={{ border: 0 }}

@@ -35,14 +35,14 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold rounded-full hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
+          <a href="tel:+9779706418555" className="group relative px-8 py-4 bg-gradient-to-r from-yellow-400 to-amber-400 text-green-900 font-black rounded-full hover:shadow-2xl glow-yellow transition-all duration-300 hover:scale-110 animate-pulse">
             <span className="flex items-center gap-2">
-              Join a Free Trial
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              Book Now - Call Us
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </span>
-          </button>
+          </a>
 
-          <button className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-full border-2 border-orange-500 hover:bg-orange-500 hover:border-orange-500 transition-all duration-300 hover:scale-105">
+          <button className="px-8 py-4 bg-green-700/40 backdrop-blur-sm text-yellow-300 font-black rounded-full border-3 border-yellow-400 hover:bg-yellow-400 hover:text-green-900 transition-all duration-300 hover:scale-110">
             Explore Our Programs
           </button>
         </div>
