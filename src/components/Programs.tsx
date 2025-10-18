@@ -77,21 +77,24 @@ export default function Programs() {
   ];
 
   return (
-    <section id="programs" className="py-24 bg-gradient-to-b from-gray-900 to-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="programs" className="py-24 bg-gradient-to-b from-emerald-900 to-green-900 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-green-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-full mb-6">
-            <span className="text-orange-400 font-semibold">Our Programs</span>
+          <div className="inline-block px-4 py-2 bg-yellow-400/20 border-2 border-yellow-400/40 rounded-full mb-6">
+            <span className="text-yellow-300 font-bold">Our Programs</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-black text-yellow-300 mb-6">
             Choose Your
-            <span className="block bg-gradient-to-r from-blue-400 to-orange-400 text-transparent bg-clip-text">
+            <span className="block bg-gradient-to-r from-yellow-200 to-amber-300 text-transparent bg-clip-text">
               Path to Excellence
             </span>
           </h2>
 
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-yellow-200/90 text-lg max-w-2xl mx-auto font-semibold">
             From martial arts to performing arts, we offer diverse programs designed to transform your mind, body, and spirit.
           </p>
         </div>
@@ -100,27 +103,27 @@ export default function Programs() {
           {programs.map((program, index) => (
             <div
               key={index}
-              className={`group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border ${program.borderColor} hover:border-opacity-100 border-opacity-50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl cursor-pointer overflow-hidden`}
+              className="group relative bg-yellow-100 p-8 rounded-2xl border-2 border-yellow-400 hover:shadow-xl glow-yellow transition-all duration-300 hover:transform hover:scale-105 cursor-pointer overflow-hidden animate-slide-in"
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${program.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
 
-              <div className={`relative w-16 h-16 bg-gradient-to-br ${program.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <program.icon className="w-8 h-8 text-white" />
+              <div className="relative w-16 h-16 bg-gradient-to-br from-green-700 to-emerald-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <program.icon className="w-8 h-8 text-yellow-300" />
               </div>
 
-              <h3 className="relative text-white font-bold text-2xl mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-300 group-hover:to-orange-300 transition-all duration-300">
+              <h3 className="relative text-green-900 font-black text-2xl mb-3 transition-all duration-300">
                 {program.title}
               </h3>
 
-              <p className="relative text-gray-400 leading-relaxed mb-3">
+              <p className="relative text-green-800 leading-relaxed mb-3 font-semibold">
                 {program.description}
               </p>
 
-              <p className="relative text-blue-400 text-sm font-semibold mb-4">
+              <p className="relative text-emerald-700 text-sm font-bold mb-4">
                 {program.details}
               </p>
 
-              <div className={`mt-6 inline-flex items-center text-sm font-semibold ${program.bgColor} px-4 py-2 rounded-full border ${program.borderColor}`}>
+              <div className="mt-6 inline-flex items-center text-sm font-black bg-gradient-to-r from-green-700 to-emerald-700 text-yellow-300 px-4 py-2 rounded-full hover:shadow-lg glow-green transition-all">
                 Enroll Now →
               </div>
             </div>

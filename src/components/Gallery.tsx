@@ -27,21 +27,24 @@ export default function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="py-24 bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="gallery" className="py-24 bg-gradient-to-b from-green-900 to-emerald-900 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full mb-6">
-            <span className="text-blue-400 font-semibold">Gallery</span>
+          <div className="inline-block px-4 py-2 bg-yellow-400/20 border-2 border-yellow-400/40 rounded-full mb-6">
+            <span className="text-yellow-300 font-bold">Gallery</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-black text-yellow-300 mb-6">
             Witness The
-            <span className="block bg-gradient-to-r from-blue-400 to-orange-400 text-transparent bg-clip-text">
+            <span className="block bg-gradient-to-r from-yellow-200 to-amber-300 text-transparent bg-clip-text">
               Energy & Excellence
             </span>
           </h2>
 
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-yellow-200/90 text-lg max-w-2xl mx-auto font-semibold">
             Experience the vibrancy of our classes through these moments captured at The ECA Heaven.
           </p>
         </div>
@@ -50,16 +53,16 @@ export default function Gallery() {
           {images.map((image, index) => (
             <div
               key={index}
-              className="group relative h-80 rounded-2xl overflow-hidden cursor-pointer"
+              className="group relative h-80 rounded-2xl overflow-hidden cursor-pointer border-2 border-yellow-400 hover:shadow-xl glow-yellow transition-all duration-300 animate-slide-in"
             >
               <img
                 src={image.url}
                 alt={image.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-green-900 via-green-900/50 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-white font-bold text-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                <h3 className="text-yellow-300 font-black text-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                   {image.title}
                 </h3>
               </div>

@@ -2,35 +2,35 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-emerald-900 via-green-800 to-green-900">
       <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/416809/pexels-photo-416809.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-20 animate-pulse"></div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black"></div>
 
       <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-400/20 rounded-full blur-3xl animate-pulse animate-float"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-orange-500/20 px-6 py-3 rounded-full border border-blue-500/30 mb-8 backdrop-blur-sm">
-          <Sparkles className="w-5 h-5 text-orange-400" />
-          <span className="text-blue-300 font-semibold tracking-wide">Where Passion Meets Performance</span>
+        <div className="inline-flex items-center gap-2 bg-yellow-400/20 px-6 py-3 rounded-full border-2 border-yellow-400/50 mb-8 backdrop-blur-sm animate-bounce-slow">
+          <Sparkles className="w-5 h-5 text-yellow-300" />
+          <span className="text-yellow-200 font-bold tracking-wide">Where Passion Meets Performance</span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight">
-          <span className="text-white">Where Passion</span>
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight animate-slide-in">
+          <span className="text-yellow-300">Where Passion</span>
           <br />
-          <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-orange-500 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-yellow-200 via-yellow-300 to-amber-300 text-transparent bg-clip-text">
             Meets Performance!
           </span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl text-yellow-100 mb-8 max-w-3xl mx-auto leading-relaxed font-semibold">
           Your one-stop hub for Dance, Zumba, Martial Arts, Music & Acting – helping kids, teens, and adults grow with confidence and creativity.
         </p>
 
-        <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg text-yellow-200/90 mb-12 max-w-2xl mx-auto leading-relaxed">
           At THE ECA HEAVEN, we believe every child and adult has a hidden talent waiting to shine. Our hub nurtures creativity, builds confidence, and develops life skills through arts, fitness, and performance.
         </p>
 
@@ -55,16 +55,16 @@ export default function Hero() {
             { number: '5★', label: 'Rated' }
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl md:text-5xl font-black bg-gradient-to-r from-blue-400 to-orange-400 text-transparent bg-clip-text mb-2">
+              <div className="text-4xl md:text-5xl font-black text-yellow-300 mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-400 text-sm uppercase tracking-wider">{stat.label}</div>
+              <div className="text-yellow-200 text-sm uppercase tracking-wider font-semibold">{stat.label}</div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-green-900 to-transparent"></div>
     </section>
   );
 }
