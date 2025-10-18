@@ -13,14 +13,14 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-gray-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-green-900/90 backdrop-blur-lg border-b border-yellow-400/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-orange-500 rounded-xl flex items-center justify-center">
-              <Zap className="w-7 h-7 text-white" />
+            <div className="w-12 h-12 bg-gradient-to-br from-green-700 to-emerald-700 rounded-xl flex items-center justify-center">
+              <Zap className="w-7 h-7 text-yellow-300" />
             </div>
-            <span className="text-2xl font-black bg-gradient-to-r from-blue-400 to-orange-400 text-transparent bg-clip-text">
+            <span className="text-2xl font-black bg-gradient-to-r from-yellow-300 to-amber-300 text-transparent bg-clip-text">
               The ECA Heaven
             </span>
           </div>
@@ -30,20 +30,20 @@ export default function Navbar() {
               <a
                 key={index}
                 href={item.href}
-                className="text-gray-300 hover:text-white font-semibold transition-colors relative group"
+                className="text-yellow-200 hover:text-yellow-300 font-bold transition-colors relative group"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-orange-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-amber-400 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
-            <button className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
+            <a href="tel:+9779706418555" className="px-6 py-2.5 bg-gradient-to-r from-yellow-400 to-amber-400 text-green-900 font-black rounded-full hover:shadow-lg glow-yellow transition-all duration-300 hover:scale-110">
               Join Now
-            </button>
+            </a>
           </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white p-2 hover:bg-gray-800 rounded-lg transition-colors"
+            className="md:hidden text-yellow-300 p-2 hover:bg-green-800 rounded-lg transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -51,21 +51,21 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-gray-900 border-t border-gray-800">
+        <div className="md:hidden bg-green-800 border-t border-yellow-400/30">
           <div className="px-4 py-6 space-y-4">
             {menuItems.map((item, index) => (
               <a
                 key={index}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-gray-300 hover:text-white font-semibold py-2 transition-colors"
+                className="block text-yellow-200 hover:text-yellow-300 font-bold py-2 transition-colors"
               >
                 {item.label}
               </a>
             ))}
-            <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all">
+            <a href="tel:+9779706418555" className="w-full px-6 py-3 bg-gradient-to-r from-yellow-400 to-amber-400 text-green-900 font-black rounded-full hover:shadow-lg glow-yellow transition-all block text-center">
               Join Now
-            </button>
+            </a>
           </div>
         </div>
       )}
