@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,9 +17,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-green-700 to-emerald-700 rounded-xl flex items-center justify-center">
-              <Zap className="w-7 h-7 text-yellow-300" />
-            </div>
+            <img
+              src="https://instagram.fktm10-1.fna.fbcdn.net/v/t51.2885-19/530400717_17965522895955256_5117700039563821617_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fktm10-1.fna.fbcdn.net&_nc_cat=104&_nc_oc=Q6cZ2QFxPn5v4RDzzzHzcYLOMqqxSQj-_aWFwl_yQA-1eU6kC8O3WRxBLBprOOtD7I4h7p6op1HgU3kCVxLOCd-XlIF3&_nc_ohc=aX5fM6dVYdoQ7kNvwG05IqU&_nc_gid=59IWFYvNoIHOFpjGe2fxWQ&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AffYZ-FSoA7JyRgr7WFfraa5A9sZbgSBiSsudDbsAfpKeg&oe=68FABFC5&_nc_sid=22de04"
+              alt="The ECA Heaven Logo"
+              className="w-14 h-14 rounded-lg object-cover border-2 border-yellow-400"
+            />
             <span className="text-2xl font-black bg-gradient-to-r from-yellow-300 to-amber-300 text-transparent bg-clip-text">
               The ECA Heaven
             </span>

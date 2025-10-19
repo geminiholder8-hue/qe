@@ -91,21 +91,27 @@ export default function Contact() {
 
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/the_eca_heaven/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 bg-gradient-to-br from-yellow-400 to-amber-500 p-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-lg glow-yellow transition-all hover:scale-105"
               >
                 <Instagram className="w-6 h-6 text-green-900" />
                 <span className="text-green-900 font-black">Instagram</span>
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61572449370241"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 bg-gradient-to-br from-yellow-400 to-amber-500 p-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-lg glow-yellow transition-all hover:scale-105"
               >
                 <Facebook className="w-6 h-6 text-green-900" />
                 <span className="text-green-900 font-black">Facebook</span>
               </a>
               <a
-                href="#"
+                href="https://youtube.com/@Ramsharanguru"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 bg-gradient-to-br from-yellow-400 to-amber-500 p-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-lg glow-yellow transition-all hover:scale-105"
               >
                 <Youtube className="w-6 h-6 text-green-900" />
