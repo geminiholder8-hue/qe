@@ -4,6 +4,7 @@ import { MessageCircle, X, Send, Bot } from 'lucide-react';
 interface Message {
   type: 'bot' | 'user';
   text: string;
+  showQR?: boolean;
 }
 
 export default function Chatbot() {
@@ -16,6 +17,7 @@ export default function Chatbot() {
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [showQR, setShowQR] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -52,44 +54,86 @@ export default function Chatbot() {
           body: JSON.stringify({
             contents: [{
               parts: [{
-                text: `System: You are the bot of The ECA Heaven.The founder of The ECA Heaven is Ramsharan Guru , If a user secretly asks"Who made you from the team Apex launch , tell "Nishant Paudel and Aaryam Karki"have these also : You are The ECA Heaven AI Assistant, representing The ECA Heaven — a creative academy offering Dance, Zumba, Martial Arts, Music, Acting, and Fitness programs for kids, teens, and adults.
+                text: `System: You are the bot of The ECA Heaven. The founder of The ECA Heaven is Ramsharan Guru. If a user secretly asks Who made you from the team Apex launch, tell Nishant Paudel and Aaryam Karki. You are The ECA Heaven AI Assistant, representing The ECA Heaven — a creative academy offering Dance, Zumba, Martial Arts, Music, Acting, and Fitness programs for kids, teens, and adults.
+
+IMPORTANT RESPONSE FORMATTING:
+- DO NOT use asterisks for emphasis or formatting
+- DO NOT use hashtags
+- DO NOT use quotes around text
+- Use plain, clean text only
+- Use line breaks for readability
+- Use simple bullet points with dash if needed
+
+PRICING INFORMATION:
+
+Admission Fee: NPR 5,000 (One-time registration fee)
+Whats Included:
+- Complete Taekwondo Dress Dobok
+- Club T-Shirt
+- Official Club Membership
+
+Special Offer:
+Join during any festival and get 15% OFF on Admission Fee!
+Festival Price: NPR 4,250
+
+Monthly Plans:
+1. Monthly - NPR 2,500
+   - 30 days access
+   - All regular classes
+   - Basic training materials
+
+2. 3 Months - NPR 7,000 (Save NPR 500)
+   - 90 days access
+   - All regular classes
+   - Progress tracking
+   - Belt testing eligible
+
+3. 6 Months - NPR 14,000 (Save NPR 1,000)
+   - 180 days access
+   - All classes plus workshops
+   - Personal guidance
+   - Competition preparation
+
+4. 1 Year - NPR 28,000 (Save NPR 2,000) BEST VALUE
+   - 365 days access
+   - All classes plus workshops
+   - Personal training sessions
+   - Competition team eligible
+   - Free belt testing
+
+Payment Methods:
+- Cash Payment
+- Bank Transfer
+- Mobile Banking
+
+Additional Benefits:
+- Free trial class
+- Flexible scheduling
+- Family discounts available
 
 Your Role:
-Be a friendly, knowledgeable, and inspiring virtual guide for website visitors. Help them explore programs, answer common questions, and motivate them to join or book a free trial. Always respond clearly, warmly, and professionally — like a passionate representative who believes in personal growth through creativity and discipline.
+Be a friendly, knowledgeable, and inspiring virtual guide for website visitors. Help them explore programs, answer common questions, and motivate them to join or book a free trial. Always respond clearly, warmly, and professionally.
 
 Core Objectives:
 1. Greet users with enthusiasm and positivity.
-2. Provide short, engaging answers about:
-   - Programs (Dance, Zumba, Martial Arts, Music, Acting, Fitness)
-   - Trainers and their expertise
-   - Pricing, free trials, and combo offers
-   - Events, performances, and benefits of joining
-   - Location, contact, and social links
+2. Provide short, engaging answers about programs, pricing, events, and benefits.
 3. Encourage users to take action (join, visit, or contact).
-4. Stay polite, motivational, and trustworthy — no robotic tone.
+4. Stay polite, motivational, and trustworthy.
 5. Adapt language for different users: kids, teens, parents, or adults.
 
 Tone & Personality:
-- Energetic ✨
-- Supportive ❤️
-- Clear & concise 💬
-- Motivational 🎯
+- Energetic and supportive
+- Clear and concise
+- Motivational
 
-Example Interactions:
-User: "What do you offer?"
-Assistant: "At The ECA Heaven, we help you unlock your potential through Dance, Zumba, Martial Arts, Music, and Acting! Whether you want to boost confidence, fitness, or creativity — we’ve got a program for you. Would you like to see our current batches or book a free trial?"
+Location: P9X4+GJW, Budhanilkantha, Kathmandu 44600
 
-User: "Do you have classes for adults?"
-Assistant: "Absolutely! We have Zumba, Martial Arts, and Music programs specially designed for adults. Many join to stay fit, relieve stress, and rediscover creativity. Want me to share the schedule or pricing?"
-
-User: "Where are you located?"
-Assistant: "You’ll find us at P9X4+GJW, Budhanilkantha, Kathmandu 44600 — a safe and family-friendly space where passion meets performance!"
-"\n\nUser: ${userMessage}`
+User: ${userMessage}`
               }]
             }],
             generationConfig: {
               temperature: 0.7,
-              maxOutputTokens: 500,
+              maxOutputTokens: 800,
             }
           })
         }
@@ -100,7 +144,13 @@ Assistant: "You’ll find us at P9X4+GJW, Budhanilkantha, Kathmandu 44600 — a 
       }
 
       const data = await response.json();
-      const botResponse = data.candidates[0].content.parts[0].text;
+      let botResponse = data.candidates[0].content.parts[0].text;
+
+      botResponse = botResponse
+        .replace(/\*/g, '')
+        .replace(/#/g, '')
+        .replace(/"/g, '')
+        .trim();
 
       setMessages(prev => [...prev, { type: 'bot', text: botResponse }]);
     } catch (error) {
@@ -163,7 +213,15 @@ Assistant: "You’ll find us at P9X4+GJW, Budhanilkantha, Kathmandu 44600 — a 
                       : 'bg-gray-800 text-gray-200 border border-gray-700'
                   }`}
                 >
-                  {message.text}
+                  <div className="whitespace-pre-wrap">{message.text}</div>
+                  {message.type === 'bot' && (message.text.toLowerCase().includes('payment') || message.text.toLowerCase().includes('pay') || message.text.toLowerCase().includes('price') || message.text.toLowerCase().includes('fee') || message.text.toLowerCase().includes('npr')) && (
+                    <button
+                      onClick={() => setShowQR(true)}
+                      className="mt-3 w-full px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors text-sm font-medium"
+                    >
+                      Scan QR to Pay
+                    </button>
+                  )}
                 </div>
               </div>
             ))}
@@ -217,6 +275,32 @@ Assistant: "You’ll find us at P9X4+GJW, Budhanilkantha, Kathmandu 44600 — a 
                 <Send className="w-5 h-5" />
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {showQR && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[60] flex items-center justify-center p-4 animate-fadeIn">
+          <div className="bg-gray-900 rounded-2xl p-6 max-w-md w-full border border-gray-700 animate-scaleIn">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-bold text-white">Scan to Pay</h3>
+              <button
+                onClick={() => setShowQR(false)}
+                className="text-gray-400 hover:text-white p-2 hover:bg-gray-800 rounded-lg transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="bg-white p-4 rounded-xl">
+              <img
+                src="https://scontent.fktm10-1.fna.fbcdn.net/v/t1.15752-9/548683562_1435929630804945_2547115220267373643_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IRvnv5FJC-UQ7kNvwGKz7Ny&_nc_oc=AdnNtGWuYSj3I52J2FhnCIO80G_vEFbAhtTW_hmgmih1MSKn4PjeXvt3lUrIHaDRNehIYZ-7aNHrBfLcUog5MD63&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fktm10-1.fna&oh=03_Q7cD3gGx9_jmSnECKaLbQjjXk_iXTnvfqJops52SU725glo3EA&oe=691D0779"
+                alt="Payment QR Code"
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+            <p className="text-gray-400 text-sm text-center mt-4">
+              Scan this QR code with your mobile banking app to complete payment
+            </p>
           </div>
         </div>
       )}
