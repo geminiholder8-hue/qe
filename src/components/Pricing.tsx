@@ -1,49 +1,76 @@
 import { Check, Sparkles, Users, Crown } from 'lucide-react';
 
 export default function Pricing() {
+  const admissionFee = {
+    regular: 5000,
+    festival: 4250,
+    discount: 15,
+    included: [
+      'Complete Taekwondo Dress (Dobok)',
+      'Club T-Shirt',
+      'Official Club Membership'
+    ]
+  };
+
   const packages = [
     {
       icon: Sparkles,
-      name: 'Single Activity',
-      description: 'Perfect for focused learning',
+      name: 'Monthly',
+      price: 2500,
+      description: 'Perfect for trying out',
       features: [
-        'Choose any one program',
-        'Monthly, Quarterly, or Yearly plans',
-        'Access to all facilities',
-        'Performance opportunities',
-        'Progress tracking'
+        '30 days access',
+        'All regular classes',
+        'Basic training materials'
       ],
       color: 'from-blue-500 to-blue-600',
       popular: false
     },
     {
-      icon: Crown,
-      name: 'Combo Package',
-      description: 'Best value for multiple interests',
+      icon: Users,
+      name: '3 Months',
+      price: 7000,
+      savings: 500,
+      description: 'Great for beginners',
       features: [
-        'Join two or more activities',
-        'Special discounted rates',
-        'Flexible scheduling',
-        'Priority booking for events',
-        'Free trial for new activity',
-        'Cross-training benefits'
+        '90 days access',
+        'All regular classes',
+        'Progress tracking',
+        'Belt testing eligible'
       ],
-      color: 'from-orange-500 to-red-600',
-      popular: true
+      color: 'from-green-500 to-emerald-600',
+      popular: false
     },
     {
-      icon: Users,
-      name: 'Family Package',
-      description: 'Great savings for families',
+      icon: Sparkles,
+      name: '6 Months',
+      price: 14000,
+      savings: 1000,
+      description: 'Serious commitment',
       features: [
-        'Special offers for siblings',
-        'Parents joining together',
-        'Multi-member discounts',
-        'Family performance events',
-        'Shared progress updates'
+        '180 days access',
+        'All classes + workshops',
+        'Personal guidance',
+        'Competition preparation'
+      ],
+      color: 'from-orange-500 to-red-600',
+      popular: false
+    },
+    {
+      icon: Crown,
+      name: '1 Year',
+      price: 28000,
+      savings: 2000,
+      description: 'Maximum savings',
+      features: [
+        '365 days access',
+        'All classes + workshops',
+        'Personal training sessions',
+        'Competition team eligible',
+        'Free belt testing'
       ],
       color: 'from-purple-500 to-pink-600',
-      popular: false
+      popular: true
     }
   ];
 
@@ -70,7 +97,32 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="bg-gradient-to-r from-yellow-400 to-amber-400 rounded-3xl p-8 mb-12 border-2 border-yellow-300">
+          <div className="text-center">
+            <h3 className="text-3xl font-black text-green-900 mb-4">Admission Fee</h3>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-6">
+              <div>
+                <div className="text-5xl font-black text-green-900">NPR {admissionFee.regular.toLocaleString()}</div>
+                <div className="text-green-800 font-bold">One-time registration fee</div>
+              </div>
+              <div className="bg-green-700 rounded-2xl p-6 text-center">
+                <div className="text-yellow-300 font-black text-sm mb-2">FESTIVAL OFFER</div>
+                <div className="text-3xl font-black text-yellow-300 mb-1">NPR {admissionFee.festival.toLocaleString()}</div>
+                <div className="text-yellow-200 text-sm font-bold">{admissionFee.discount}% OFF during festivals</div>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+              {admissionFee.included.map((item, idx) => (
+                <div key={idx} className="flex items-center gap-2 bg-green-900/20 rounded-lg p-3">
+                  <Check className="w-5 h-5 text-green-900 flex-shrink-0" />
+                  <span className="text-green-900 font-bold text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {packages.map((pkg, index) => (
             <div
               key={index}
@@ -89,6 +141,14 @@ export default function Pricing() {
               </div>
 
               <h3 className="text-green-900 font-black text-2xl mb-2">{pkg.name}</h3>
+              <div className="text-3xl font-black text-green-900 mb-2">
+                NPR {pkg.price.toLocaleString()}
+              </div>
+              {pkg.savings && (
+                <div className="text-green-700 font-bold text-sm mb-2">
+                  Save NPR {pkg.savings.toLocaleString()}
+                </div>
+              )}
               <p className="text-green-800 mb-6 font-semibold">{pkg.description}</p>
 
               <div className="space-y-4 mb-8">
@@ -116,10 +176,34 @@ export default function Pricing() {
 
         <div className="bg-yellow-100/95 border-2 border-yellow-400 rounded-3xl p-12 text-center">
           <h3 className="text-3xl font-black text-green-900 mb-4">
-            Ready to Get Started?
+            Payment Information
           </h3>
+          <div className="grid md:grid-cols-2 gap-8 mb-8 max-w-4xl mx-auto">
+            <div className="text-left">
+              <h4 className="text-xl font-black text-green-900 mb-4">Payment Methods</h4>
+              <div className="space-y-3">
+                {['Cash Payment', 'Bank Transfer', 'Mobile Banking'].map((method, idx) => (
+                  <div key={idx} className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-green-700" />
+                    <span className="text-green-800 font-semibold">{method}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="text-left">
+              <h4 className="text-xl font-black text-green-900 mb-4">Additional Benefits</h4>
+              <div className="space-y-3">
+                {['Free trial class', 'Flexible scheduling', 'Family discounts available'].map((benefit, idx) => (
+                  <div key={idx} className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-green-700" />
+                    <span className="text-green-800 font-semibold">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
           <p className="text-green-800 text-lg mb-8 max-w-2xl mx-auto font-semibold">
-            Book your free trial class today and experience THE ECA HEAVEN difference. No credit card required, no commitment!
+            Book your free trial class today and experience THE ECA HEAVEN difference. No commitment required!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+9779706418555" className="px-10 py-4 bg-gradient-to-r from-green-700 to-emerald-700 text-yellow-300 font-black rounded-full hover:shadow-2xl glow-green transition-all duration-300 hover:scale-110">
