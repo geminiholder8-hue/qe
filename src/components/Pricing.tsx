@@ -1,4 +1,4 @@
-import { Check, Sparkles, Users, Crown } from 'lucide-react';
+import { Check, Sparkles, Users, Crown, Music } from 'lucide-react';
 
 export default function Pricing() {
   const admissionFee = {
@@ -12,65 +12,68 @@ export default function Pricing() {
     ]
   };
 
-  const packages = [
+  const generalPrograms = [
     {
       icon: Sparkles,
-      name: 'Monthly',
-      price: 2500,
+      name: '1 Month',
+      priceRange: '2,000–3,500',
+      savings: null,
       description: 'Perfect for trying out',
-      features: [
-        '30 days access',
-        'All regular classes',
-        'Basic training materials'
-      ],
-      color: 'from-blue-500 to-blue-600',
+      programs: 'Dance, Zumba, Muay Thai, Yoga, Taekwondo',
       popular: false
     },
     {
       icon: Users,
       name: '3 Months',
-      price: 7000,
+      priceRange: '5,500–11,000',
       savings: 500,
       description: 'Great for beginners',
-      features: [
-        '90 days access',
-        'All regular classes',
-        'Progress tracking',
-        'Belt testing eligible'
-      ],
-      color: 'from-green-500 to-emerald-600',
+      programs: 'Dance, Zumba, Muay Thai, Yoga, Taekwondo',
       popular: false
     },
     {
       icon: Sparkles,
       name: '6 Months',
-      price: 14000,
+      priceRange: '7,000–20,500',
       savings: 1000,
       description: 'Serious commitment',
-      features: [
-        '180 days access',
-        'All classes + workshops',
-        'Personal guidance',
-        'Competition preparation'
-      ],
-      color: 'from-orange-500 to-red-600',
+      programs: 'Dance, Zumba, Muay Thai, Yoga, Taekwondo',
       popular: false
     },
     {
       icon: Crown,
       name: '1 Year',
-      price: 28000,
+      priceRange: '22,000–42,000',
       savings: 2000,
       description: 'Maximum savings',
-      features: [
-        '365 days access',
-        'All classes + workshops',
-        'Personal training sessions',
-        'Competition team eligible',
-        'Free belt testing'
-      ],
-      color: 'from-purple-500 to-pink-600',
+      programs: 'Dance, Zumba, Muay Thai, Yoga, Taekwondo',
       popular: true
+    }
+  ];
+
+  const musicPrograms = {
+    icon: Music,
+    name: 'Music & Vocal Classes',
+    description: '3 days/week program',
+    note: 'Contact for pricing'
+  };
+
+  const taekwondoClub = [
+    {
+      duration: '1 Month',
+      price: 3000
+    },
+    {
+      duration: '3 Months',
+      price: 8000
+    },
+    {
+      duration: '6 Months',
+      price: 16000
+    },
+    {
+      duration: '12 Months',
+      price: 32000
     }
   ];
 
@@ -122,56 +125,100 @@ export default function Pricing() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {packages.map((pkg, index) => (
-            <div
-              key={index}
-              className={`relative bg-yellow-100 p-8 rounded-3xl border-2 ${
-                pkg.popular ? 'border-amber-500 shadow-2xl glow-yellow' : 'border-yellow-400'
-              } hover:border-yellow-500 hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105`}
-            >
-              {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-700 to-emerald-700 px-6 py-2 rounded-full">
-                  <span className="text-yellow-300 font-black text-sm">MOST POPULAR</span>
-                </div>
-              )}
-
-              <div className="w-16 h-16 bg-gradient-to-br from-green-700 to-emerald-700 rounded-2xl flex items-center justify-center mb-6">
-                <pkg.icon className="w-8 h-8 text-yellow-300" />
-              </div>
-
-              <h3 className="text-green-900 font-black text-2xl mb-2">{pkg.name}</h3>
-              <div className="text-3xl font-black text-green-900 mb-2">
-                NPR {pkg.price.toLocaleString()}
-              </div>
-              {pkg.savings && (
-                <div className="text-green-700 font-bold text-sm mb-2">
-                  Save NPR {pkg.savings.toLocaleString()}
-                </div>
-              )}
-              <p className="text-green-800 mb-6 font-semibold">{pkg.description}</p>
-
-              <div className="space-y-4 mb-8">
-                {pkg.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-700 flex-shrink-0 mt-0.5" />
-                    <span className="text-green-800 text-sm font-medium">{feature}</span>
+        <div className="mb-16">
+          <h3 className="text-3xl font-black text-yellow-300 mb-8 text-center">
+            Dance / Zumba / Muay Thai (Kids & Adults) / Yoga / Taekwondo
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {generalPrograms.map((pkg, index) => (
+              <div
+                key={index}
+                className={`relative bg-yellow-100 p-8 rounded-3xl border-2 ${
+                  pkg.popular ? 'border-amber-500 shadow-2xl glow-yellow' : 'border-yellow-400'
+                } hover:border-yellow-500 hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105`}
+              >
+                {pkg.popular && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-700 to-emerald-700 px-6 py-2 rounded-full">
+                    <span className="text-yellow-300 font-black text-sm">MOST POPULAR</span>
                   </div>
-                ))}
-              </div>
+                )}
 
+                <div className="w-16 h-16 bg-gradient-to-br from-green-700 to-emerald-700 rounded-2xl flex items-center justify-center mb-6">
+                  <pkg.icon className="w-8 h-8 text-yellow-300" />
+                </div>
+
+                <h3 className="text-green-900 font-black text-2xl mb-2">{pkg.name}</h3>
+                <div className="text-3xl font-black text-green-900 mb-2">
+                  NPR {pkg.priceRange}
+                </div>
+                {pkg.savings && (
+                  <div className="text-green-700 font-bold text-sm mb-2">
+                    Save NPR {pkg.savings.toLocaleString()}
+                  </div>
+                )}
+                <p className="text-green-800 mb-6 font-semibold">{pkg.description}</p>
+
+                <a
+                  href="tel:+9779706418555"
+                  className="w-full py-4 rounded-full font-black transition-all duration-300 flex items-center justify-center bg-gradient-to-r from-green-700 to-emerald-700 text-yellow-300 hover:shadow-lg glow-green"
+                >
+                  Call to Register
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <h3 className="text-3xl font-black text-yellow-300 mb-8 text-center">
+            Music & Vocal Classes
+          </h3>
+          <div className="max-w-2xl mx-auto">
+            <div className="relative bg-yellow-100 p-8 rounded-3xl border-2 border-yellow-400 hover:border-yellow-500 hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-700 to-emerald-700 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                <musicPrograms.icon className="w-8 h-8 text-yellow-300" />
+              </div>
+              <h3 className="text-green-900 font-black text-2xl mb-2 text-center">{musicPrograms.name}</h3>
+              <p className="text-green-800 mb-4 font-semibold text-center">{musicPrograms.description}</p>
+              <div className="text-2xl font-black text-green-900 mb-6 text-center">{musicPrograms.note}</div>
               <a
                 href="tel:+9779706418555"
-                className={`w-full py-4 rounded-full font-black transition-all duration-300 flex items-center justify-center ${
-                  pkg.popular
-                    ? 'bg-gradient-to-r from-green-700 to-emerald-700 text-yellow-300 hover:shadow-lg glow-green'
-                    : 'bg-gradient-to-r from-green-700 to-emerald-700 text-yellow-300 hover:shadow-lg glow-green'
-                }`}
+                className="w-full py-4 rounded-full font-black transition-all duration-300 flex items-center justify-center bg-gradient-to-r from-green-700 to-emerald-700 text-yellow-300 hover:shadow-lg glow-green"
               >
-                Call to Register
+                Call for Details
               </a>
             </div>
-          ))}
+          </div>
+        </div>
+
+        <div className="mb-12">
+          <h3 className="text-3xl font-black text-yellow-300 mb-8 text-center">
+            Warrior Spirit Taekwondo Club
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {taekwondoClub.map((pkg, index) => (
+              <div
+                key={index}
+                className="relative bg-yellow-100 p-8 rounded-3xl border-2 border-yellow-400 hover:border-yellow-500 hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-green-700 to-emerald-700 rounded-2xl flex items-center justify-center mb-6">
+                  <Crown className="w-8 h-8 text-yellow-300" />
+                </div>
+
+                <h3 className="text-green-900 font-black text-2xl mb-2">{pkg.duration}</h3>
+                <div className="text-3xl font-black text-green-900 mb-6">
+                  NPR {pkg.price.toLocaleString()}
+                </div>
+
+                <a
+                  href="tel:+9779706418555"
+                  className="w-full py-4 rounded-full font-black transition-all duration-300 flex items-center justify-center bg-gradient-to-r from-green-700 to-emerald-700 text-yellow-300 hover:shadow-lg glow-green"
+                >
+                  Call to Register
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="bg-yellow-100/95 border-2 border-yellow-400 rounded-3xl p-12 text-center">
