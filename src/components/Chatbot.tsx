@@ -64,42 +64,32 @@ IMPORTANT RESPONSE FORMATTING:
 - Use line breaks for readability
 - Use simple bullet points with dash if needed
 
-PRICING INFORMATION:
+COMPLETE FEE STRUCTURE:
 
-Admission Fee: NPR 5,000 (One-time registration fee)
-Whats Included:
-- Complete Taekwondo Dress Dobok
+ADMISSION FEE:
+- Regular: NPR 5,000 (One-time registration)
+- Festival Offer: NPR 4,250 (15% OFF during festivals)
+
+Admission Includes:
+- Complete Taekwondo Dress (Dobok)
 - Club T-Shirt
 - Official Club Membership
 
-Special Offer:
-Join during any festival and get 15% OFF on Admission Fee!
-Festival Price: NPR 4,250
+DANCE / ZUMBA / MUAY THAI (KIDS & ADULTS) / YOGA / TAEKWONDO:
+- 1 Month: NPR 2,000–3,500
+- 3 Months: NPR 5,500–11,000 (Save NPR 500)
+- 6 Months: NPR 7,000–20,500 (Save NPR 1,000)
+- 1 Year: NPR 22,000–42,000 (Save NPR 2,000)
 
-Monthly Plans:
-1. Monthly - NPR 2,500
-   - 30 days access
-   - All regular classes
-   - Basic training materials
+MUSIC & VOCAL CLASSES:
+- 3 days per week
+- Contact for pricing details
 
-2. 3 Months - NPR 7,000 (Save NPR 500)
-   - 90 days access
-   - All regular classes
-   - Progress tracking
-   - Belt testing eligible
-
-3. 6 Months - NPR 14,000 (Save NPR 1,000)
-   - 180 days access
-   - All classes plus workshops
-   - Personal guidance
-   - Competition preparation
-
-4. 1 Year - NPR 28,000 (Save NPR 2,000) BEST VALUE
-   - 365 days access
-   - All classes plus workshops
-   - Personal training sessions
-   - Competition team eligible
-   - Free belt testing
+WARRIOR SPIRIT TAEKWONDO CLUB:
+- 1 Month: NPR 3,000
+- 3 Months: NPR 8,000
+- 6 Months: NPR 16,000
+- 12 Months: NPR 32,000
 
 Payment Methods:
 - Cash Payment
@@ -107,7 +97,7 @@ Payment Methods:
 - Mobile Banking
 
 Additional Benefits:
-- Free trial class
+- Free trial class available
 - Flexible scheduling
 - Family discounts available
 
@@ -173,28 +163,28 @@ User: ${userMessage}`
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 z-50 flex items-center justify-center group"
+          className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-green-700 to-emerald-700 text-yellow-300 rounded-full shadow-2xl glow-green hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 z-50 flex items-center justify-center group border-2 border-yellow-400"
         >
           <MessageCircle className="w-8 h-8 group-hover:scale-110 transition-transform" />
-          <span className="absolute -top-1 -right-1 w-4 h-4 bg-orange-500 rounded-full animate-pulse"></span>
+          <span className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full animate-pulse"></span>
         </button>
       )}
 
       {isOpen && (
-        <div className="fixed bottom-6 right-6 w-96 h-[600px] bg-gray-900 rounded-2xl shadow-2xl z-50 flex flex-col border border-gray-700 overflow-hidden">
-          <div className="bg-gradient-to-r from-blue-600 to-blue-500 p-4 flex items-center justify-between">
+        <div className="fixed bottom-6 right-6 w-96 h-[600px] bg-green-950 rounded-2xl shadow-2xl z-50 flex flex-col border-2 border-yellow-400/50 overflow-hidden glow-yellow">
+          <div className="bg-gradient-to-r from-green-700 to-emerald-700 p-4 flex items-center justify-between border-b-2 border-yellow-400/50">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                <Bot className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 bg-yellow-400/30 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-yellow-400">
+                <Bot className="w-6 h-6 text-yellow-300" />
               </div>
               <div>
-                <h3 className="text-white font-bold">ECA Bot</h3>
-                <p className="text-blue-100 text-xs">Online • Powered by Gemini</p>
+                <h3 className="text-yellow-300 font-black">ECA Bot</h3>
+                <p className="text-yellow-200 text-xs font-semibold">Online • Powered by Gemini</p>
               </div>
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-white hover:bg-white/20 p-2 rounded-lg transition-colors"
+              className="text-yellow-300 hover:bg-yellow-400/20 p-2 rounded-lg transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
@@ -209,8 +199,8 @@ User: ${userMessage}`
                 <div
                   className={`max-w-[80%] p-3 rounded-2xl ${
                     message.type === 'user'
-                      ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white'
-                      : 'bg-gray-800 text-gray-200 border border-gray-700'
+                      ? 'bg-gradient-to-r from-yellow-400 to-amber-400 text-green-900 font-semibold'
+                      : 'bg-green-900 text-yellow-100 border-2 border-yellow-400/30'
                   }`}
                 >
                   <div className="whitespace-pre-wrap">{message.text}</div>
@@ -228,11 +218,14 @@ User: ${userMessage}`
 
             {isLoading && (
               <div className="flex justify-start">
-                <div className="bg-gray-800 text-gray-200 border border-gray-700 p-3 rounded-2xl">
-                  <div className="flex gap-2">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce delay-100"></div>
-                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce delay-200"></div>
+                <div className="bg-gradient-to-r from-green-700 to-emerald-700 text-yellow-300 border-2 border-yellow-400/50 p-4 rounded-2xl shadow-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="flex gap-1.5">
+                      <div className="w-2.5 h-2.5 bg-yellow-300 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                      <div className="w-2.5 h-2.5 bg-yellow-300 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                      <div className="w-2.5 h-2.5 bg-yellow-300 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                    </div>
+                    <span className="text-sm font-semibold">ECA Bot is thinking...</span>
                   </div>
                 </div>
               </div>
@@ -245,7 +238,7 @@ User: ${userMessage}`
                   <button
                     key={index}
                     onClick={() => handleQuickQuestion(question)}
-                    className="block w-full text-left p-3 bg-gray-800 hover:bg-gray-700 text-gray-200 text-sm rounded-lg border border-gray-700 transition-colors"
+                    className="block w-full text-left p-3 bg-green-900 hover:bg-green-800 text-yellow-200 text-sm rounded-lg border-2 border-yellow-400/30 transition-colors font-semibold"
                   >
                     {question}
                   </button>
@@ -256,7 +249,7 @@ User: ${userMessage}`
             <div ref={messagesEndRef} />
           </div>
 
-          <div className="p-4 border-t border-gray-700">
+          <div className="p-4 border-t-2 border-yellow-400/50 bg-green-900">
             <div className="flex gap-2">
               <input
                 type="text"
@@ -265,12 +258,12 @@ User: ${userMessage}`
                 onKeyPress={(e) => e.key === 'Enter' && !isLoading && handleSend()}
                 placeholder="Ask me anything..."
                 disabled={isLoading}
-                className="flex-1 bg-gray-800 text-white px-4 py-3 rounded-full border border-gray-700 focus:outline-none focus:border-blue-500 transition-colors disabled:opacity-50"
+                className="flex-1 bg-green-950 text-yellow-100 px-4 py-3 rounded-full border-2 border-yellow-400/30 focus:outline-none focus:border-yellow-400 transition-colors disabled:opacity-50 placeholder-yellow-200/50 font-semibold"
               />
               <button
                 onClick={handleSend}
                 disabled={isLoading}
-                className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-blue-500/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-amber-400 text-green-900 rounded-full flex items-center justify-center hover:shadow-lg glow-yellow transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send className="w-5 h-5" />
               </button>
@@ -281,24 +274,24 @@ User: ${userMessage}`
 
       {showQR && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[60] flex items-center justify-center p-4 animate-fadeIn">
-          <div className="bg-gray-900 rounded-2xl p-6 max-w-md w-full border border-gray-700 animate-scaleIn">
+          <div className="bg-gradient-to-br from-green-900 to-green-950 rounded-2xl p-6 max-w-md w-full border-2 border-yellow-400 shadow-2xl glow-yellow animate-scaleIn">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-xl font-bold text-white">Scan to Pay</h3>
+              <h3 className="text-2xl font-black text-yellow-300">Scan to Pay</h3>
               <button
                 onClick={() => setShowQR(false)}
-                className="text-gray-400 hover:text-white p-2 hover:bg-gray-800 rounded-lg transition-colors"
+                className="text-yellow-300 hover:text-yellow-400 p-2 hover:bg-green-800 rounded-lg transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
-            <div className="bg-white p-4 rounded-xl">
+            <div className="bg-white p-4 rounded-xl border-2 border-yellow-400">
               <img
                 src="https://scontent.fktm10-1.fna.fbcdn.net/v/t1.15752-9/548683562_1435929630804945_2547115220267373643_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IRvnv5FJC-UQ7kNvwGKz7Ny&_nc_oc=AdnNtGWuYSj3I52J2FhnCIO80G_vEFbAhtTW_hmgmih1MSKn4PjeXvt3lUrIHaDRNehIYZ-7aNHrBfLcUog5MD63&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fktm10-1.fna&oh=03_Q7cD3gGx9_jmSnECKaLbQjjXk_iXTnvfqJops52SU725glo3EA&oe=691D0779"
                 alt="Payment QR Code"
                 className="w-full h-auto rounded-lg"
               />
             </div>
-            <p className="text-gray-400 text-sm text-center mt-4">
+            <p className="text-yellow-200 text-sm text-center mt-4 font-semibold">
               Scan this QR code with your mobile banking app to complete payment
             </p>
           </div>
