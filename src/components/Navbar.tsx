@@ -18,7 +18,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3">
             <img
-              src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/6d997f32f0836f3f352e3cb5860f09b4~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=77d0cab9&x-expires=1761055200&x-signature=%2FRWbf%2FMWh1UFD3YMyHNIzsCvWdc%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my"
+              src="https://postimg.cc/YG9z16jq"
               alt="The ECA Heaven Logo"
               className="w-14 h-14 rounded-lg object-cover border-2 border-yellow-400"
             />
